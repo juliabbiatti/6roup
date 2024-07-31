@@ -1,8 +1,8 @@
-import React from "react";
+
 import { Link } from "react-router-dom";
 function Header() {
   return (
-    <header style={{ backgroundColor: "#7d7d7d", color: "#bfbfbf" }}>
+    <header style={{ backgroundColor: "#000", color: "#fff" }}>
       <nav>
         <div>Logo</div>
         <div>

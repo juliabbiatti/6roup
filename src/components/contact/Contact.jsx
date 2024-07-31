@@ -1,16 +1,12 @@
-import React from 'react'
-import fondo2 from "../../assets/images/fondo2.jpg";
-
+import Formulario from "../formulario/formulario";
+import Redes from "../redes/Redes";
+import "./Contact.css"
 function Contact() {
   return (
-    <div  style={{
-      backgroundImage: `url(${fondo2})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      height: "70vh",
-      color: "white",
-    }}>Contact</div>
-  )
+    <div className="bg-gray">
+      <Redes />
+      <Formulario />
+    </div>
+  );
 }
-
 export default Contact;

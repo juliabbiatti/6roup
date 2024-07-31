@@ -1,8 +1,7 @@
-import React from 'react'
 
 function Footer() {
   return (
-    <footer style={{backgroundColor:"#7d7d7d", color:"#bfbfbf"}}>
+    <footer style={{backgroundColor:"#000", color:"#fff"}}>
       <div>Footer</div>
     </footer>
   )

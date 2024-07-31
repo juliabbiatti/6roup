@@ -1,16 +1,22 @@
-import React from 'react'
-import fondo3 from "../../assets/images/fondo3.jpg";
+
+import CardB from "../cardB/CardB";
 
 function Shop() {
   return (
-    <div  style={{
-      backgroundImage: `url(${fondo3})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      height: "70vh",
-      color: "white",
-    }}>Shop</div>
-  )
+    <div className="container">
+      <div className="row">
+        <div className="col-md-4">
+          <CardB />
+        </div>
+        <div className="col-md-4">
+          <CardB />
+        </div>
+        <div className="col-md-4">
+          <CardB />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Shop;
