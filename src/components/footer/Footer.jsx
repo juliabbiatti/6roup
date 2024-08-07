@@ -2,7 +2,7 @@ import "./Footer.css"
 function Footer() {
   return (
     <footer className="footer">
-      <div> Derechos Reservados | ©6roup | 2024</div>
+      <div> Derechos Reservados | ©2024 | 6roup</div>
     </footer>
   )
 }
