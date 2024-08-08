@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/Logo 6roup.jpeg";
+import logo from "../../assets/images/Logo.jpeg";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+//import InputGroup from 'react-bootstrap/InputGroup';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import "./Header.css";
 
 function Header() {
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="#home">
           <img
@@ -19,19 +25,33 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Link to="/">
-              <Nav.Link href="#home">Inicio</Nav.Link>
-            </Link>
-            <Link to="/shop">
-              {" "}
-              <Nav.Link href="#link">Tienda</Nav.Link>
-            </Link>
-            <Link to="/contact">
-              {" "}
-              <Nav.Link href="#link">Contacto</Nav.Link>
-            </Link>
+          <Nav className="me-auto clases">
+            <Nav.Link as={Link} to="/" className="inicio">
+              Inicio
+            </Nav.Link>
+            <Nav.Link as={Link} to="/shop" className="tienda">
+              Tienda
+            </Nav.Link>
+            <Nav.Link as={Link} to="/contact" className="contacto">
+              Contacto
+            </Nav.Link>
           </Nav>
+          <Form inline>
+            <Row>
+              <Col xs="auto">
+                <Form.Control
+                  type="text"
+                  placeholder="Qué estas buscando?"
+                  className=" mr-sm-2"
+                />
+              </Col>
+              <Col xs="auto">
+                <Button type="submit" variant="secondary">
+                  Buscar
+                </Button>
+              </Col>
+            </Row>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

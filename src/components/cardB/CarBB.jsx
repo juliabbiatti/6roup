@@ -29,10 +29,12 @@ function CardBB() {
   }, []);
 
   const handleAddToCart = (product) => {
-    const existingItem = cartItems.find(item => item.product.id === product.id);
+    const existingItem = cartItems.find(
+      (item) => item.product.id === product.id
+    );
     if (existingItem) {
       setCartItems(
-        cartItems.map(item =>
+        cartItems.map((item) =>
           item.product.id === product.id
             ? { ...item, quantity: item.quantity + quantity }
             : item
@@ -55,52 +57,57 @@ function CardBB() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <h5>Loading...</h5>
+      </div>
+    );
   }
 
   return (
-    <>
-      <Container>
-        <Row>
+    <div className="bg-dark">
+      <Container className="mt-4">
+        <Row className="gy-4 gx-4">
           {products.map((product) => (
-            <Col key={product.id} xs={12} sm={6} md={4} lg={4}>
-              <Card className="bg-dark text-white text-center mb-4">
+            <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
+              <Card className="bg-dark text-white text-center h-100">
                 <Card.Img
                   variant="top"
                   src={product.image}
                   alt={product.title}
-                  style={{ height: "200px", objectFit: "cover" }}
+                  className="card-img"
                 />
-                <Card.Body className="d-flex flex-column align-items-center">
+                <Card.Body className="d-flex flex-column align-items-center card-body">
                   <Card.Title>{product.title}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    {product.category}
-                  </Card.Subtitle>
-                  <Card.Text>{product.description}</Card.Text>
-                  <Card.Text>${product.price}</Card.Text>
-                  <div className="d-flex align-items-center">
-                    <Button
-                      variant="secondary"
-                      onClick={() => handleAddToCart(product)}
-                      className="me-2 w-100"
-                    >
-                      Añadir al Carrito
-                    </Button>
-                    <div className="d-flex align-items-center">
+                  <Card.Text>${product.price.toFixed(2)}</Card.Text>
+                  <Card.Text className="card-description">
+                    {product.description}
+                  </Card.Text>
+                  <div className="mt-auto w-100"> {/* Mover los botones al final */}
+                    <div className="d-flex flex-column align-items-center">
+                      <div className="d-flex mb-2"> {/* Alineación en columna */}
+                        <Button
+                          variant="outline-secondary"
+                          onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
+                          className="me-1"
+                        >
+                          -
+                        </Button>
+                        <span className="contador mx-2">{quantity}</span>
+                        <Button
+                          variant="outline-secondary"
+                          onClick={() => setQuantity(quantity + 1)}
+                          className="ms-1"
+                        >
+                          +
+                        </Button>
+                      </div>
                       <Button
-                        variant="outline-secondary"
-                        onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
-                        className="me-1"
+                        variant="secondary"
+                        onClick={() => handleAddToCart(product)}
+                        className="w-100"
                       >
-                        -
-                      </Button>
-                      <span className="contador mx-2">{quantity}</span>
-                      <Button
-                        variant="outline-secondary"
-                        onClick={() => setQuantity(quantity + 1)}
-                        className="ms-1"
-                      >
-                        +
+                        Añadir al Carrito
                       </Button>
                     </div>
                   </div>
@@ -155,7 +162,7 @@ function CardBB() {
           </div>
         )}
       </Offcanvas>
-    </>
+    </div>
   );
 }
 

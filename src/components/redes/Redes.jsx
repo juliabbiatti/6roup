@@ -46,7 +46,7 @@ const Redes = () => {
       />
       {mostrarTexto && (
         <a href="https://web.whatsapp.com/" className="href">
-          whatsApp
+          WhatsApp
         </a>
       )}
     </div>
