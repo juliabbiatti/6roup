@@ -83,9 +83,9 @@ function CardBB() {
                   <Card.Text className="card-description">
                     {product.description}
                   </Card.Text>
-                  <div className="mt-auto w-100"> {/* Mover los botones al final */}
+                  <div className="mt-auto w-100"> 
                     <div className="d-flex flex-column align-items-center">
-                      <div className="d-flex mb-2"> {/* Alineación en columna */}
+                      <div className="d-flex mb-2"> 
                         <Button
                           variant="outline-secondary"
                           onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
