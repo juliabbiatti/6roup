@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../../assets/images/Logo.jpeg";
+import logo from "../../assets/images/Logo1.jpeg";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 //import InputGroup from 'react-bootstrap/InputGroup';
@@ -41,7 +41,7 @@ function Header() {
               <Col xs="auto">
                 <Form.Control
                   type="text"
-                  placeholder="Qué estas buscando?"
+                  placeholder="Qué estás buscando?"
                   className=" mr-sm-2"
                 />
               </Col>

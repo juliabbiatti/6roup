@@ -1,0 +1,9 @@
+.location-map{
+    position: relative;
+    top:18%;
+    left:3%;
+    
+    width:30%;
+    justify-content: left;
+    transform: translatex(-300px);
+    }

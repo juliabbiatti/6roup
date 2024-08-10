@@ -1,4 +1,5 @@
-import CardBB from "../cardB/CarBB";
+import CardB from "../cardB/CardB";
+
 
 
 
@@ -7,7 +8,7 @@ function Shop() {
   return (
     
         <div>
-          <CardBB/>
+        <CardB/>
         </div>
       
   );

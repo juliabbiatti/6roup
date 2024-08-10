@@ -1,7 +1,14 @@
 .redes {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f7f5f5;
+  width: 300px;
+  height: 360px;
+  text-align: center;
+  position:relative;
+  left: 70%;
+transform: translatey( 85px);
+
 }
 .img {
   background-color: rgba(11, 11, 11, 0);

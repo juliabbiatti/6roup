@@ -55,7 +55,18 @@ const Formulario = () => {
       <button className="BotonForm" type="submit">
         Enviar
       </button>
-      {enviado && <p>Formulario Enviado</p>}
+      {enviado && <p style={{
+      backgroundColor:"black",
+      color: "white",
+      height:"3rem",
+      alignContentContent: "center",
+      fontFamily:"fantasy",
+      fontSize: 24,
+      letterSpacing: "2px",
+      boxShadow:"0px 0px 10px #ffffff",
+      borderRadius:"10px",
+      margin:"0.5px"
+      }} >Formulario Enviado</p>}
     </form>
   );
 };

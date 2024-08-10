@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -7,12 +6,13 @@ import { fetchProductos } from "./api";
 import { Container, Row, Col } from "react-bootstrap";
 import "./CardB.css";
 
-function CardBB() {
+function CardB() {
   const [show, setShow] = useState(false);
   const [cartItems, setCartItems] = useState([]);
-  const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
+  const [quantities, setQuantities] = useState({});
+  const [mensajeGracias, setMensajeGracias] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +20,11 @@ function CardBB() {
         const data = await fetchProductos();
         setProducts(data);
         setLoading(false);
+        const initialQuantities = {};
+        data.forEach((product) => {
+          initialQuantities[product.id] = 1;
+        });
+        setQuantities(initialQuantities);
       } catch (error) {
         console.error(error);
         setLoading(false);
@@ -29,6 +34,7 @@ function CardBB() {
   }, []);
 
   const handleAddToCart = (product) => {
+    const quantity = quantities[product.id];
     const existingItem = cartItems.find(
       (item) => item.product.id === product.id
     );
@@ -44,7 +50,6 @@ function CardBB() {
       setCartItems([...cartItems, { product, quantity }]);
     }
     setShow(true);
-    setQuantity(1);
   };
 
   const handleRemoveFromCart = (index) => {
@@ -52,14 +57,25 @@ function CardBB() {
   };
 
   const handleCheckout = () => {
-    setCartItems([]);
-    setShow(false);
+    setMensajeGracias("¡Gracias por tu compra!");
+    setTimeout(() => {
+      setCartItems([]);
+      setShow(false);
+      setMensajeGracias(""); 
+    }, 2000); 
+  };
+
+  const handleQuantityChange = (productId, delta) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [productId]: Math.max(prevQuantities[productId] + delta, 1),
+    }));
   };
 
   if (loading) {
     return (
       <div>
-        <h5>Loading...</h5>
+        <h5>Cargando...</h5>
       </div>
     );
   }
@@ -70,7 +86,7 @@ function CardBB() {
         <Row className="gy-4 gx-4">
           {products.map((product) => (
             <Col key={product.id} xs={12} sm={6} md={4} lg={3} className="mb-4">
-              <Card className="bg-dark text-white text-center h-100">
+              <Card className="bg-secondary text-white text-center h-100">
                 <Card.Img
                   variant="top"
                   src={product.image}
@@ -83,27 +99,29 @@ function CardBB() {
                   <Card.Text className="card-description">
                     {product.description}
                   </Card.Text>
-                  <div className="mt-auto w-100"> 
+                  <div className="mt-auto w-100">
                     <div className="d-flex flex-column align-items-center">
-                      <div className="d-flex mb-2"> 
+                      <div className="d-flex mb-2">
                         <Button
-                          variant="outline-secondary"
-                          onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}
+                          variant="outline-dark"
+                          onClick={() => handleQuantityChange(product.id, -1)}
                           className="me-1"
                         >
                           -
                         </Button>
-                        <span className="contador mx-2">{quantity}</span>
+                        <span className="contador mx-2">
+                          {quantities[product.id]}
+                        </span>
                         <Button
-                          variant="outline-secondary"
-                          onClick={() => setQuantity(quantity + 1)}
+                          variant="outline-dark"
+                          onClick={() => handleQuantityChange(product.id, 1)}
                           className="ms-1"
                         >
                           +
                         </Button>
                       </div>
                       <Button
-                        variant="secondary"
+                        variant="dark"
                         onClick={() => handleAddToCart(product)}
                         className="w-100"
                       >
@@ -123,7 +141,11 @@ function CardBB() {
           <Offcanvas.Title>Carrito de Compras</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {cartItems.length === 0 ? (
+          {mensajeGracias ? (
+            <div className="text-center text-success mb-4">
+              <h5>{mensajeGracias}</h5>
+            </div>
+          ) : cartItems.length === 0 ? (
             <div>No hay artículos en el carrito</div>
           ) : (
             <div>
@@ -147,11 +169,15 @@ function CardBB() {
             </div>
           )}
         </Offcanvas.Body>
-        {cartItems.length > 0 && (
+        {cartItems.length > 0 && !mensajeGracias && (
           <div className="p-3">
-            <Link to="/shop/Shop" className="continuarComprando">
+            <Button
+              variant="link"
+              onClick={() => setShow(false)}
+              className="continuarComprando"
+            >
               Seguir Comprando
-            </Link>
+            </Button>
             <Button
               variant="primary"
               onClick={handleCheckout}
@@ -166,4 +192,4 @@ function CardBB() {
   );
 }
 
-export default CardBB;
+export default CardB;
