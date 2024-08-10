@@ -1,14 +1,14 @@
 import Formulario from "../formulario/formulario";
 import LocationMap from "../location/LocationMap";
-import fondo2 from "../../assets/images/fondo2.jpg";
+import Fondo2 from "../../assets/images/Fondo2.jpg";
 import Redes from "../redes/Redes";
 import "./Contact.css";
 function Contact() {
   return (
     <div style={{
-      backgroundImage: `url(${fondo2})`,
+      backgroundImage: `url(${Fondo2})`,
       backgroundSize:"cover",
-      height:"70vh",
+      height:"100vh",
       display:"flex",
       
     }} className="bg-gray">
