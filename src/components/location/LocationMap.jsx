@@ -1,4 +1,4 @@
-
+import React from 'react';
 import './LocationMap.css';
 
 const LocationMap = () => {
@@ -11,7 +11,7 @@ const LocationMap = () => {
         height:"4rem",
         textAlign:"center",
         fontFamily:"fantasy",
-        fontSize: 40,
+        fontSize: "40px",
         letterSpacing: "10px",
         width:"86%",
         alignContent:"center",

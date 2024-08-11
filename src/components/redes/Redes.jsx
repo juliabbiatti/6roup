@@ -3,11 +3,12 @@ import "./redes.css";
 import whatsAPP from "../../assets/images/whatsApp.png";
 
 
+
 const Redes = () => {
   const [mostrarTexto, setMostrarTexto] = useState(false);
 
   const handleImagenClick = () => {
-    setMostrarTexto(!mostrarTexto);
+ setMostrarTexto(!mostrarTexto);
   };
 
   return (
@@ -20,7 +21,7 @@ const Redes = () => {
         letterSpacing:"5px",
         borderRadius:"10px",
         boxShadow:"0px 0px 10px #ffffff",
-      }}> DIRECCIÓN: Palermo 1400 </p>
+      }}> Dirección: Palermo 1400, Caba </p>
 
 <p style={{
         backgroundColor:"black",
@@ -30,7 +31,7 @@ const Redes = () => {
         letterSpacing:"5px",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
-      }}>TELEFONO <br/> 54 11- 3452346</p> 
+      }}>Teléfono: <br/> 54 11-345 2346</p> 
 
       <img
         className="img"
@@ -52,7 +53,7 @@ const Redes = () => {
         letterSpacing:"5px",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
-      }}>E-MAIL group@gmail.com</p>
+      }}>E-mail: contacto@gmail.com</p>
     </div>
   );
 };

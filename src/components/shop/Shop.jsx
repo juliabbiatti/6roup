@@ -1,9 +1,4 @@
 import CardB from "../cardB/CardB";
-
-
-
-
-
 function Shop() {
   return (
     
