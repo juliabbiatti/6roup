@@ -1,7 +1,9 @@
 import Image from 'react-bootstrap/Image';
+import sale from "../../assets/images/sale.jpeg"
 
-function FluidExample() {
-  return <Image src="holder.js/100px250" fluid />;
+
+function Marketing () {
+  return <Image src={sale} fluid />;
 }
 
-export default FluidExample;
+export default Marketing ;

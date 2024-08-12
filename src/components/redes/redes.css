@@ -1,3 +1,9 @@
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .redes {
   padding: 20px;
   border-radius: 10px;
@@ -5,9 +11,8 @@
   width: 300px;
   height: 360px;
   text-align: center;
-  position:relative;
   left: 70%;
-transform: translatey( 85px);
+ margin: 20px;
 
 }
 .img {

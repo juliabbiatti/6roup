@@ -17,8 +17,8 @@ function Header() {
         <Navbar.Brand href="#home">
           <img
             src={logo}
-            width="100"
-            height="100"
+            width="150"
+            height="150"
             className="d-inline-block align-top"
             alt="logo"
           />
@@ -41,7 +41,7 @@ function Header() {
               <Col xs="auto">
                 <Form.Control
                   type="text"
-                  placeholder="Qué estás buscando?"
+                  placeholder="¿Qué estás buscando?"
                   className=" mr-sm-2"
                 />
               </Col>

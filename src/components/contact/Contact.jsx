@@ -8,15 +8,14 @@ function Contact() {
     <div style={{
       backgroundImage: `url(${Fondo2})`,
       backgroundSize:"cover",
-      height:"100vh",
       display:"flex",
       
     }} className="bg-gray">
-      <Redes />
+    <div>  <Redes /></div>
 
-      <Formulario />
+     <div> <Formulario /></div>
 
-      <LocationMap />
+     <div><LocationMap /></div>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-content">
-                <h2 className="footer-title">6group</h2>
+                <h2 className="footer-title">6roup</h2>
                 <div className="social-icons">
                     <a href="https://www.facebook.com/6group" target="_blank" rel="noopener noreferrer">
                         <FaFacebookF />
@@ -20,7 +20,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 6group. Todos los derechos reservados.</p>
+                <p>&copy; 2024 6roup. Todos los derechos reservados.</p>
             </div>
         </footer>
     );

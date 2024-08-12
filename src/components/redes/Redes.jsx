@@ -17,7 +17,6 @@ const Redes = () => {
         backgroundColor:"black",
         color:"white",
         margin:"2rem",
-        fontFamily:"fantasy",
         letterSpacing:"5px",
         borderRadius:"10px",
         boxShadow:"0px 0px 10px #ffffff",
@@ -27,7 +26,6 @@ const Redes = () => {
         backgroundColor:"black",
         color:"white",
         margin:"2rem",
-        fontFamily:"fantasy",
         letterSpacing:"5px",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
@@ -49,11 +47,10 @@ const Redes = () => {
         backgroundColor:"black",
         color:"white",
         margin:"2rem",
-        fontFamily:"fantasy",
         letterSpacing:"5px",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
-      }}>E-mail: contacto@gmail.com</p>
+      }}>E-mail: info@group.com</p>
     </div>
   );
 };

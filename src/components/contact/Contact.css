@@ -1,4 +1,13 @@
 .bg-gray{
     background-color: gray;
-    height: 100vh;
+    display: grid;
+   justify-content: space-between;
+   
+}
+
+@media (max-width) {
+    .bg-gray {
+        flex-direction: column;
+        justify-content: space-around;
+    }
 }
