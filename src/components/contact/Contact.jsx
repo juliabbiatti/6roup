@@ -11,10 +11,9 @@ function Contact() {
       display:"flex",
       
     }} className="bg-gray">
-    <div>  <Redes /></div>
-
+      
      <div> <Formulario /></div>
-
+     <div>  <Redes /></div>
      <div><LocationMap /></div>
     </div>
   );

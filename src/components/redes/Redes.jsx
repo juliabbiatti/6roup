@@ -47,7 +47,6 @@ const Redes = () => {
         backgroundColor:"black",
         color:"white",
         margin:"2rem",
-        letterSpacing:"5px",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
       }}>E-mail: info@group.com</p>
