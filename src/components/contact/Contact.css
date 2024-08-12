@@ -9,5 +9,6 @@
     .bg-gray {
         flex-direction: column;
         justify-content: space-around;
+        margin: none;
     }
 }
