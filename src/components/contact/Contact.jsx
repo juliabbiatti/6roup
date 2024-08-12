@@ -1,6 +1,6 @@
 import Formulario from "../formulario/formulario";
 import LocationMap from "../location/LocationMap";
-import Fondo2 from "../../assets/images/Fondo2.jpg";
+import Fondo2 from "../../assets/images/fondo2.jpg";
 import Redes from "../redes/Redes";
 import "./Contact.css";
 function Contact() {
