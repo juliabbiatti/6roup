@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://juliabbiatti.github.io/6roup",
+  "homepage": "https://juliabbiatti.github.io/6roup/",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
