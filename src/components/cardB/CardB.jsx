@@ -81,7 +81,7 @@ function CardB() {
   }
 
   return (
-    <div className="bg-dark">
+    <div className="fondo">
       <Container className="mt-4">
         <Row className="gy-4 gx-4">
           {products.map((product) => (
