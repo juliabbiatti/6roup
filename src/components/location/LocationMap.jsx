@@ -7,7 +7,7 @@ const LocationMap = () => {
       <h4 style={{
         borderRadius: "10px",
         color: "white",
-        height:"4rem",
+        height:"5rem",
         textAlign:"center",
         fontSize: "35px",
         width:"300px",

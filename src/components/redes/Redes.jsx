@@ -20,7 +20,7 @@ const Redes = () => {
         letterSpacing:"5px",
         borderRadius:"10px",
         boxShadow:"0px 0px 10px #ffffff",
-      }}> Dirección: Palermo 1400, Caba </p>
+      }}> Dirección:<br/>Monroe 4584</p>
 
 <p style={{
         backgroundColor:"black",
@@ -29,7 +29,7 @@ const Redes = () => {
         letterSpacing:"5px",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
-      }}>Teléfono: <br/> 54 11-345 2346</p> 
+      }}>Teléfono: <br/>11-345 2346</p> 
 
       <img
         className="img"
@@ -49,7 +49,7 @@ const Redes = () => {
         margin:"2rem",
         boxShadow:"0px 0px 10px #ffffff",
         borderRadius:"10px",
-      }}>E-mail: info@group.com</p>
+      }}>info@6roup.com</p>
     </div>
   );
 };
